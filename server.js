@@ -36,16 +36,17 @@ app.get('/count/', cors(corsOptions), function(req, res) {
 
 // Here is the actual HTTP server
 // In this case, HTTPS (secure) server
-var https = require('https');
+var http = require('http');
 
-Security options - key and certificate
-var options = {
-    key: fs.readFileSync('keys/privkey.pem'),
-    cert: fs.readFileSync('keys/fullchain.pem'),
-};
+// Security options - key and certificate
+// var options = {
+//     key: fs.readFileSync('keys/privkey.pem'),
+//     cert: fs.readFileSync('keys/fullchain.pem'),
+// };
 
 // We pass in the Express object and the options object
-var httpServer = https.createServer(options, app);
+// var httpServer = https.createServer(options, app);
+var httpServer = http.createServer(app);
 
 // Tell Express to look in the "public" folder for any files first
 app.use(express.static('public'));
