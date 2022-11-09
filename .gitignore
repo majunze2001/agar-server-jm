@@ -1,0 +1,15 @@
+.DS_Store
+
+inclass/
+
+*.zip
+
+zcode
+
+midterm/
+
+ztest/
+
+*/node_modules/
+
+*/test/
